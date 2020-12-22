@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, #root {
+    font-family: 'Roboto', sans-serif;
+    background: url('./background/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 40px;
+    outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-container .weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    margin: 20px 0;
+    padding: 30px 0;
+    line-height: 20px;
+    box-shadow: 2px 2px 4px 3px rgba(26, 25, 25, 0.4);
 }
 
-.App-link {
-  color: #61dafb;
+.weather .city-name {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather .city-name sup {
+    font-size: 0.6em;
+    background: rgb(226, 190, 27);
+    padding: 1px 4px;
+    color: #fff;
+    border-radius: 8px;
+    margin-left: 3px;
 }
+
+.weather .city-temp {
+    font-size: 2.5em;
+    font-weight: bolder;
+    padding: 5px 0;
+    margin: 5px 0;
+}
+
+.weather .city-temp sup {
+    font-size: 0.6em;
+}
+
+.weather .info {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+@media only screen and (max-width: 600px) {
+    .search {
+        padding: 20px 15%;
+    }
+
+    .city {
+        padding: 40px 20%;
+    }
+}
+
+/* @media (min-width: 380px) and (max-width: 450px) {
+    .main-container {
+        height: 100%;
+        width: 100%;
+    }
+
+    .weather, .search{
+        width: 100%;
+    }
+} */
